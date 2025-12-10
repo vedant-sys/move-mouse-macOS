@@ -8,7 +8,9 @@ version = "0.0.0"
 description = "Move Mouse Mac: A simple utility to move the mouse cursor on macOS."
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["pyobjc-framework-quartz>=10.0"]
+dependencies = [
+    "pyobjc-framework-quartz>=10.0; sys_platform == 'darwin'",
+]
 
 [project.scripts]
 move-mouse-mac = "move_mouse_mac.cli:main"
