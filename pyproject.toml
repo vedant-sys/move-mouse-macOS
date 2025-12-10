@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "move-mouse-mac"
+version = "0.0.0"
+description = "Move Mouse Mac: A simple utility to move the mouse cursor on macOS."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["pyobjc-framework-quartz>=10.0"]
+
+[project.scripts]
+move-mouse-mac = "move_mouse_mac.cli:main"
+
+[tool.semantic_release]
+version_toml = ["pyproject.toml:project.version"]
+commit_parser = "conventional"
+branch = "main"
+tag_format = "v{version}"
+upload_to_repository = false
+changelog_file = "CHANGELOG.md"
+
+[tool.hatch.build.targets.wheel]
+packages = ["move_mouse_mac"]
+
+[tool.semantic_release.commit_parser_options]
+minor_types = ["feat"]
+minor_tags = ["feat"]
+patch_types = ["fix", "chore"]
+patch_tags = ["fix", "chore"]
