@@ -7,9 +7,16 @@ import random
 import signal
 import threading
 import time
-from typing import Tuple
+from typing import Any, Tuple
 
-import Quartz
+try:
+    import Quartz as _Quartz  # type: ignore[import]
+except ImportError as exc:
+    raise SystemExit(
+        "Quartz framework not found. Install with 'uv add pyobjc-framework-Quartz' or 'pip install pyobjc-framework-Quartz'."
+    ) from exc
+
+Quartz: Any = _Quartz
 
 
 def parse_args() -> argparse.Namespace:
@@ -93,11 +100,13 @@ def wait_with_checks(duration: float, stop_event: threading.Event) -> bool:
     return stop_event.is_set()
 
 
-def user_activity_listener(stop_event: threading.Event, user_event: threading.Event) -> None:
+def user_activity_listener(
+    stop_event: threading.Event, user_event: threading.Event
+) -> None:
     """Listen for real user mouse activity and set user_event when detected."""
     pid = os.getpid()
 
-    def _callback(proxy, event_type, event, _refcon):
+    def _callback(_proxy, _event_type, event, _refcon):
         source_pid = Quartz.CGEventGetIntegerValueField(
             event, Quartz.kCGEventSourceUnixProcessID
         )
@@ -209,7 +218,7 @@ def move_cursor_randomly(args: argparse.Namespace) -> None:
 
 
 def main() -> None:
-    """Entrypoint: parse args, configure logging, and start cursor movement."""
+    """Entry point: parse arguments, configure logging, and start cursor movement."""
     args = parse_args()
     setup_logging()
 
