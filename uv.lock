@@ -7,11 +7,11 @@ name = "move-mouse-mac"
 version = "0.0.0"
 source = { editable = "." }
 dependencies = [
-    { name = "pyobjc-framework-quartz" },
+    { name = "pyobjc-framework-quartz", marker = "sys_platform == 'darwin'" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pyobjc-framework-quartz", specifier = ">=10.0" }]
+requires-dist = [{ name = "pyobjc-framework-quartz", marker = "sys_platform == 'darwin'", specifier = ">=10.0" }]
 
 [[package]]
 name = "pyobjc-core"
